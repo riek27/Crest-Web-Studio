@@ -3,223 +3,380 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crestline Web & Design | Premium Web Development Agency</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Crestline Web Studio | Premium Websites for Construction Companies</title>
+    <meta name="description" content="Professional web design & development agency specializing in premium websites for construction businesses, contractors, and builders across the USA.">
+    <meta name="keywords" content="construction websites, builder websites, contractor websites, roofing company websites, web design for construction">
+    <meta name="author" content="Crestline Web Studio">
+    
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="Crestline Web Studio | Professional Websites for Construction Businesses">
+    <meta property="og:description" content="Premium web design & development for construction companies across the United States.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://crestlinewebstudio.com">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="favicon.ico">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header>
+    <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-code"></i>
-                Crestline<span>Web</span>
-            </a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="index.html" class="nav-link active">Home</a></li>
-                    <li><a href="about.html" class="nav-link">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-main">Crestline</span>
+                    <span class="logo-sub">Web Studio</span>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link active">Home</a></li>
+                        <li><a href="about.html" class="nav-link">About</a></li>
+                        <li class="has-dropdown">
+                            <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="services.html#design">Website Design</a></li>
+                                <li><a href="services.html#development">Website Development</a></li>
+                                <li><a href="services.html#seo">SEO & Local Ranking</a></li>
+                                <li><a href="services.html#redesign">Website Redesign</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                        <li><a href="contact.html" class="nav-link btn-nav">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- Home Page Content -->
-    <main>
-        <section id="home">
-            <div class="hero-bg parallax"></div>
-            <div class="hero-overlay"></div>
-            
-            <div class="container">
-                <div class="hero-content">
-                    <h1>Crestline Web & Design</h1>
-                    <p>Premium web development solutions for businesses in Juba, South Sudan and beyond. We create digital experiences that elevate your brand and drive results.</p>
-                    <a href="contact.html" class="btn">Start Your Project</a>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Crestline</span>
+                <span class="logo-sub">Web Studio</span>
+            </a>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link active">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link">About</a></li>
+            <li class="mobile-has-dropdown">
+                <a href="services.html" class="mobile-nav-link mobile-dropdown-toggle">
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown">
+                    <li><a href="services.html#design" class="mobile-nav-link">Website Design</a></li>
+                    <li><a href="services.html#development" class="mobile-nav-link">Website Development</a></li>
+                    <li><a href="services.html#seo" class="mobile-nav-link">SEO & Local Ranking</a></li>
+                    <li><a href="services.html#redesign" class="mobile-nav-link">Website Redesign</a></li>
+                </ul>
+            </li>
+            <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+            <li><a href="testimonials.html" class="mobile-nav-link">Testimonials</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-bg">
+            <div class="hero-bg-image active" style="background-image: url('https://images.unsplash.com/photo-1487956382158-bb926046304a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+            <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1589939705384-5185137a7f0f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+            <div class="hero-bg-image" style="background-image: url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');"></div>
+        </div>
+        <div class="hero-overlay"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1 class="hero-title">Professional Websites for Construction Businesses</h1>
+                <div class="typing-text">
+                    <span id="typed-text"></span><span class="cursor"></span>
+                </div>
+                <div class="hero-cta">
+                    <a href="#contact-form" class="btn btn-primary btn-typing" id="cta-btn">
+                        <span class="btn-text">Let's Build Your Website</span>
+                    </a>
                 </div>
             </div>
-        </section>
-        
-        <section class="features">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Why Choose Crestline</h2>
+        </div>
+    </section>
+
+    <!-- Who We Help Section -->
+    <section class="section industries">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Who We Help</h2>
+                <p class="section-subtitle">We specialize in creating high-performing websites for construction businesses across the United States</p>
+            </div>
+            <div class="industry-grid">
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-home"></i>
+                    </div>
+                    <h3 class="industry-title">Custom Home Builders</h3>
+                    <p class="industry-description">Showcase luxury homes and attract high-end clients with elegant, responsive websites that reflect your quality craftsmanship.</p>
                 </div>
-                
-                <div class="features-grid">
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <h3>Premium Design</h3>
-                        <p>We craft visually stunning websites that reflect your brand's identity and values, creating a lasting impression on your visitors.</p>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-tools"></i>
                     </div>
-                    
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-mobile-alt"></i>
-                        </div>
-                        <h3>Fully Responsive</h3>
-                        <p>All our websites are optimized for every device, ensuring a seamless experience on desktops, tablets, and smartphones.</p>
+                    <h3 class="industry-title">Contractors</h3>
+                    <p class="industry-description">Establish credibility and generate leads with professional, mobile-optimized websites designed for contractor services.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-hammer"></i>
                     </div>
-                    
-                    <div class="feature-card fade-in">
-                        <div class="feature-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Fast Performance</h3>
-                        <p>We prioritize speed and optimization to ensure your website loads quickly, improving user experience and SEO rankings.</p>
+                    <h3 class="industry-title">Roofing Companies</h3>
+                    <p class="industry-description">Convert more service calls with websites designed for local SEO and lead generation specific to roofing services.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3 class="industry-title">Luxury Construction Firms</h3>
+                    <p class="industry-description">Present your premium projects with sophisticated, visually stunning websites that match the quality of your luxury builds.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-paint-roller"></i>
+                    </div>
+                    <h3 class="industry-title">Remodeling Companies</h3>
+                    <p class="industry-description">Display before/after galleries and capture leads with interactive, conversion-focused websites for remodeling services.</p>
+                </div>
+                <div class="industry-card">
+                    <div class="industry-icon">
+                        <i class="fas fa-hard-hat"></i>
+                    </div>
+                    <h3 class="industry-title">General Contractors</h3>
+                    <p class="industry-description">Build trust and streamline project inquiries with functional, professional websites that showcase your diverse capabilities.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Highlight -->
+    <section class="section services-highlight bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Services</h2>
+                <p class="section-subtitle">Comprehensive web solutions tailored specifically for construction businesses</p>
+            </div>
+            <div class="service-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3 class="service-title">Website Design</h3>
+                    <p class="service-description">Custom designs that reflect your brand and appeal to your target clients with industry-specific layouts and visuals.</p>
+                    <a href="services.html#design" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="service-title">Website Development</h3>
+                    <p class="service-description">Fast, responsive websites built with modern technologies and best practices for optimal performance and user experience.</p>
+                    <a href="services.html#development" class="btn btn-secondary">Learn More</a>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="service-title">SEO & Local Ranking</h3>
+                    <p class="service-description">Get found by local clients searching for construction services in your area with advanced SEO strategies.</p>
+                    <a href="services.html#seo" class="btn btn-secondary">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="section why-choose">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Why Choose Us</h2>
+                <p class="section-subtitle">What sets Crestline Web Studio apart from other web agencies</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-industry"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Industry Specialization</h3>
+                        <p class="feature-description">We understand the unique needs of construction businesses and build websites that address your specific challenges and target audience.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Mobile-First Design</h3>
+                        <p class="feature-description">Over 60% of construction service searches happen on mobile. We ensure your website looks perfect on every device.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Fast Loading Times</h3>
+                        <p class="feature-description">Slow websites lose customers. We optimize every site for maximum speed and performance, keeping bounce rates low.</p>
+                    </div>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">
+                        <i class="fas fa-search-location"></i>
+                    </div>
+                    <div class="feature-content">
+                        <h3 class="feature-title">Advanced SEO Focus</h3>
+                        <p class="feature-description">We implement cutting-edge SEO strategies that help you rank higher in local searches for construction services.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="glass-section">
-            <div class="glass-bg parallax"></div>
-            
-            <div class="container">
-                <div class="glass-content fade-in">
-                    <h2>Digital Excellence in South Sudan</h2>
-                    <p>Based in Juba, we're passionate about bringing world-class web development to businesses across South Sudan. Our team combines local understanding with global standards to create websites that perform exceptionally in any market.</p>
-                    <p>We specialize in transforming your vision into a digital reality that not only looks impressive but also delivers measurable results for your business.</p>
-                    <a href="about.html" class="btn" style="margin-top: 20px;">Learn More About Us</a>
-                </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section (Homepage) -->
+    <section class="section testimonials-home bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Client Testimonials</h2>
+                <p class="section-subtitle">Hear from construction businesses we've helped build their online presence</p>
             </div>
-        </section>
-        
-        <section class="services-preview">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Core Services</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Crestline transformed our outdated website into a lead-generating machine. We've seen a 40% increase in inquiries since launching our new site. They truly understand the construction industry."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>Michael Rodriguez</h4>
+                        <p>Owner, Elite Custom Builders • Texas</p>
+                    </div>
                 </div>
-                
-                <div class="services-grid">
-                    <div class="service-card fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-paint-brush"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Custom Web Design</h3>
-                            <p>Unique, brand-focused designs that capture attention and communicate your message effectively.</p>
-                            <a href="services.html" class="btn secondary">Learn More</a>
-                        </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"As a roofing contractor, local SEO was crucial for us. Crestline not only built us a beautiful website but also helped us rank #1 for roofing services in our area. The results have been incredible."</p>
                     </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-shopping-cart"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>E-Commerce Solutions</h3>
-                            <p>Secure, user-friendly online stores that drive sales and grow your business online.</p>
-                            <a href="services.html" class="btn secondary">Learn More</a>
-                        </div>
+                    <div class="testimonial-author">
+                        <h4>Sarah Johnson</h4>
+                        <p>CEO, Peak Roofing Solutions • Colorado</p>
                     </div>
-                    
-                    <div class="service-card fade-in">
-                        <div class="service-icon">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <div class="service-content">
-                            <h3>Responsive Development</h3>
-                            <p>Websites that look and function perfectly on all devices, from desktop to mobile.</p>
-                            <a href="services.html" class="btn secondary">Learn More</a>
-                        </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-content">
+                        <p>"Our luxury home building company needed a website that reflected the quality of our work. Crestline delivered beyond our expectations. The design is stunning and the functionality is flawless."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <h4>James Worthington</h4>
+                        <p>President, Worthington Luxury Homes • California</p>
                     </div>
                 </div>
             </div>
-        </section>
-    </main>
+            <div class="text-center mt-4">
+                <a href="testimonials.html" class="btn btn-primary">See All Our Testimonials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Trust Building Stats -->
+    <section class="section trust-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Building Trust Online</h2>
+                <p class="section-subtitle">Your website is often the first impression potential clients have of your business</p>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number" data-count="94">0</div>
+                    <p>of construction clients research online before hiring</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="75">0</div>
+                    <p>credibility based on website design alone</p>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number" data-count="3">0</div>
+                    <p>more leads with professionally designed websites</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section bg-dark">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Build Your Online Presence?</h2>
+                <p class="cta-description">Contact us today for a free consultation and proposal for your construction business website.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get Started Today</a>
+            </div>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">Crestline<span>Web</span></a>
-                    <p>Premium web development agency based in Juba, South Sudan. We create exceptional digital experiences for businesses across all industries.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-main">Crestline</span>
+                        <span class="logo-sub">Web Studio</span>
+                    </a>
+                    <p class="footer-description">Specializing in premium website design and development for construction businesses across the United States.</p>
                 </div>
-                
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Address:</strong>
-                                <p>Juba, South Sudan</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <strong>Phone:</strong>
-                                <p>+211 926 433 192</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email:</strong>
-                                <p>riekgatluak25@gmail.com</p>
-                            </div>
-                        </li>
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#design">Website Design</a></li>
+                        <li><a href="services.html#development">Website Development</a></li>
+                        <li><a href="services.html#seo">SEO & Local Ranking</a></li>
+                        <li><a href="services.html#redesign">Website Redesign</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@crestlinewebstudio.com</p>
+                        <p><i class="fas fa-globe"></i> Serving construction businesses across the U.S.</p>
+                    </div>
+                </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 Crestline Web & Design. All rights reserved.</p>
+                <p class="copyright">&copy; <span id="current-year"></span> Crestline Web Studio — All Rights Reserved</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div class="whatsapp-float" id="whatsappFloat">
-        <i class="fab fa-whatsapp"></i>
-    </div>
-    
-    <div class="whatsapp-popup" id="whatsappPopup">
-        <div class="popup-header">
-            <i class="fab fa-whatsapp"></i>
-            <h4>Crestline Support</h4>
-        </div>
-        <div class="popup-message">
-            <p><strong>Reply in 1 hour</strong></p>
-            <p>Our team typically responds within 1 hour during business hours.</p>
-        </div>
-        <div class="popup-actions">
-            <a href="https://wa.me/211981211736?text=Hello%20Crestline%20Web%20%26%20Design%2C%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="popup-btn chat">Start Chat</a>
-            <div class="popup-btn later" id="closePopup">Maybe Later</div>
-        </div>
-    </div>
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
