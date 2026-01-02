@@ -1582,3 +1582,17 @@ h6 { font-size: 1rem; }
     0% { transform: translateX(-100%); }
     100% { transform: translateX(100%); }
 }
+
+.contact-info i {
+  margin-right: 8px;
+}
+
+.contact-info a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.contact-info a:hover {
+  text-decoration: underline;
+}
+
