@@ -3,218 +3,251 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us | Crestline Web & Design</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>About Us | Crestline Web Studio</title>
+    <meta name="description" content="Learn about Crestline Web Studio - specialists in creating premium websites for construction companies across the United States.">
+    <meta name="keywords" content="about construction web design, construction website agency, builder website specialists">
+    
+    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Lato:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 <body>
     <!-- Header & Navigation -->
-    <header>
+    <header class="main-header">
         <div class="container">
-            <a href="index.html" class="logo">
-                <i class="fas fa-code"></i>
-                Crestline<span>Web</span>
-            </a>
-            
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            
-            <nav id="mainNav">
-                <ul>
-                    <li><a href="index.html" class="nav-link">Home</a></li>
-                    <li><a href="about.html" class="nav-link active">About</a></li>
-                    <li><a href="services.html" class="nav-link">Services</a></li>
-                    <li><a href="contact.html" class="nav-link">Contact</a></li>
-                </ul>
-            </nav>
+            <div class="nav-container">
+                <a href="index.html" class="logo">
+                    <span class="logo-main">Crestline</span>
+                    <span class="logo-sub">Web Studio</span>
+                </a>
+                
+                <button class="mobile-menu-btn" aria-label="Open menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+                
+                <nav class="main-nav">
+                    <ul class="nav-list">
+                        <li><a href="index.html" class="nav-link">Home</a></li>
+                        <li><a href="about.html" class="nav-link active">About</a></li>
+                        <li class="has-dropdown">
+                            <a href="services.html" class="nav-link">Services <i class="fas fa-chevron-down dropdown-arrow"></i></a>
+                            <ul class="dropdown">
+                                <li><a href="services.html#design">Website Design</a></li>
+                                <li><a href="services.html#development">Website Development</a></li>
+                                <li><a href="services.html#seo">SEO & Local Ranking</a></li>
+                                <li><a href="services.html#redesign">Website Redesign</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="pricing.html" class="nav-link">Pricing</a></li>
+                        <li><a href="testimonials.html" class="nav-link">Testimonials</a></li>
+                        <li><a href="contact.html" class="nav-link btn-nav">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
         </div>
     </header>
 
-    <!-- About Page Content -->
-    <main>
-        <section class="about-hero">
-            <div class="about-bg parallax"></div>
-            <div class="about-overlay"></div>
-            
-            <div class="container">
-                <div class="hero-content">
-                    <h1>About Crestline</h1>
-                    <p>We are a passionate team of web developers and designers based in Juba, dedicated to creating exceptional digital experiences for businesses across South Sudan and beyond.</p>
-                </div>
+    <!-- Mobile Menu -->
+    <div class="mobile-menu">
+        <div class="mobile-menu-header">
+            <a href="index.html" class="logo">
+                <span class="logo-main">Crestline</span>
+                <span class="logo-sub">Web Studio</span>
+            </a>
+            <button class="mobile-menu-close" aria-label="Close menu">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-list">
+            <li><a href="index.html" class="mobile-nav-link">Home</a></li>
+            <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+            <li class="mobile-has-dropdown">
+                <a href="services.html" class="mobile-nav-link mobile-dropdown-toggle">
+                    Services <i class="fas fa-chevron-down"></i>
+                </a>
+                <ul class="mobile-dropdown">
+                    <li><a href="services.html#design" class="mobile-nav-link">Website Design</a></li>
+                    <li><a href="services.html#development" class="mobile-nav-link">Website Development</a></li>
+                    <li><a href="services.html#seo" class="mobile-nav-link">SEO & Local Ranking</a></li>
+                    <li><a href="services.html#redesign" class="mobile-nav-link">Website Redesign</a></li>
+                </ul>
+            </li>
+            <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+            <li><a href="testimonials.html" class="mobile-nav-link">Testimonials</a></li>
+            <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <!-- About Hero -->
+    <section class="page-hero">
+        <div class="container">
+            <div class="page-hero-content">
+                <h1 class="page-hero-title">About Crestline Web Studio</h1>
+                <p class="page-hero-subtitle">Specializing in premium websites for the construction industry</p>
             </div>
-        </section>
-        
-        <section class="story">
-            <div class="container">
-                <div class="story-content fade-in">
-                    <h2>Our Story</h2>
-                    <p>Crestline Web & Design was founded in 2025 with a simple mission: to bring world-class web development to businesses in South Sudan. Our founders recognized a growing need for high-quality digital solutions in the region and set out to create an agency that could compete with international standards while understanding local markets.</p>
-                    <p>Today, we've grown into a team of dedicated professionals who have delivered over 10 successful projects for clients across various industries. Our commitment to excellence has made us a trusted partner for businesses looking to establish or enhance their online presence.</p>
-                </div>
-            </div>
-        </section>
-        
-        <section class="mission-vision-section">
-            <div class="container">
-                <div class="mission-vision">
-                    <div class="mission-card fade-in">
-                        <div class="icon-title">
-                            <i class="fas fa-bullseye"></i>
-                            <h3>Our Mission</h3>
-                        </div>
-                        <p>To empower businesses in South Sudan with premium web solutions that enhance their digital presence, drive growth, and create lasting impact in the global marketplace.</p>
-                        <p>We believe every business deserves a website that reflects their unique value proposition and connects them with their target audience effectively.</p>
-                    </div>
+        </div>
+    </section>
+
+    <!-- About Intro -->
+    <section class="section about-intro">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2 class="about-title">Building Digital Foundations for Construction Businesses</h2>
+                    <p>Crestline Web Studio was founded on a simple principle: construction businesses deserve websites as strong and reliable as the structures they build. We noticed that many contractors, builders, and remodeling companies were stuck with outdated, ineffective websites that didn't reflect the quality of their work.</p>
+                    <p>Our team combines expertise in web design and development with a deep understanding of the construction industry. We know what your clients are looking for and how to present your services in the most compelling way.</p>
+                    <p>Based in the United States, we work with construction companies nationwide, from small local contractors to large luxury home builders. Every website we create is built with precision, attention to detail, and a focus on driving real business results.</p>
                     
-                    <div class="vision-card fade-in">
-                        <div class="icon-title">
-                            <i class="fas fa-eye"></i>
-                            <h3>Our Vision</h3>
-                        </div>
-                        <p>To become the leading web development agency in East Africa, recognized for our innovation, quality, and commitment to client success.</p>
-                        <p>We aim to bridge the digital divide by making premium web development accessible to businesses of all sizes across the region.</p>
+                    <div class="about-cta">
+                        <a href="mailto:info@crestlinewebstudio.com" class="btn btn-primary">
+                            <i class="fas fa-envelope"></i> Send Us Email
+                        </a>
+                        <a href="contact.html" class="btn btn-secondary">
+                            <i class="fas fa-pencil-ruler"></i> Start Your Design
+                        </a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Construction planning meeting">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mission & Vision -->
+    <section class="section mission-vision bg-light">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Mission & Vision</h2>
+            </div>
+            <div class="mission-grid">
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3 class="mission-title">Our Mission</h3>
+                    <p class="mission-description">To empower construction businesses with premium, high-converting websites that accurately represent their brand, showcase their work, and generate consistent leads.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                    <h3 class="mission-title">Our Vision</h3>
+                    <p class="mission-description">To become the leading web development agency for construction companies across the United States, setting the standard for digital excellence in the industry.</p>
+                </div>
+                <div class="mission-card">
+                    <div class="mission-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3 class="mission-title">Our Values</h3>
+                    <p class="mission-description">Quality craftsmanship, honest communication, industry expertise, and long-term partnerships. We treat every project with the same attention to detail as you do on your construction sites.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Process -->
+    <section class="section process-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Process</h2>
+                <p class="section-subtitle">A streamlined approach to building your perfect construction website</p>
+            </div>
+            <div class="process-timeline">
+                <div class="process-step">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Discovery & Strategy</h3>
+                        <p class="step-description">We begin by understanding your business, target audience, and goals to create a custom strategy for your website.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Design & Mockups</h3>
+                        <p class="step-description">Our designers create mockups that reflect your brand and appeal to your construction clients.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Development & Build</h3>
+                        <p class="step-description">We code your website using the latest technologies, ensuring speed, responsiveness, and functionality.</p>
+                    </div>
+                </div>
+                <div class="process-step">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3 class="step-title">Launch & Support</h3>
+                        <p class="step-description">We launch your website and provide ongoing support to ensure it continues to perform for your business.</p>
                     </div>
                 </div>
             </div>
-        </section>
-        
-        <section class="values">
-            <div class="container">
-                <div class="section-title">
-                    <h2>Our Values</h2>
-                </div>
-                
-                <div class="values-grid">
-                    <div class="value-card fade-in">
-                        <div class="value-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h3>Excellence</h3>
-                        <p>We strive for excellence in every project, delivering work that exceeds expectations and stands the test of time.</p>
-                    </div>
-                    
-                    <div class="value-card fade-in">
-                        <div class="value-icon">
-                            <i class="fas fa-handshake"></i>
-                        </div>
-                        <h3>Integrity</h3>
-                        <p>We believe in transparent communication, honest recommendations, and building relationships based on trust.</p>
-                    </div>
-                    
-                    <div class="value-card fade-in">
-                        <div class="value-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <h3>Innovation</h3>
-                        <p>We stay ahead of industry trends and leverage the latest technologies to deliver cutting-edge solutions.</p>
-                    </div>
-                    
-                    <div class="value-card fade-in">
-                        <div class="value-icon">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3>Collaboration</h3>
-                        <p>We work closely with our clients, listening to their needs and involving them throughout the development process.</p>
-                    </div>
-                </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section bg-dark">
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Ready to Build Your Online Presence?</h2>
+                <p class="cta-description">Contact us today for a free consultation and proposal for your construction business website.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">Get Started Today</a>
             </div>
-        </section>
-        
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content fade-in">
-                    <h2>Ready to Work With Us?</h2>
-                    <p>Join our growing list of satisfied clients and take your business to the next level with a premium website.</p>
-                    <a href="contact.html" class="btn">Get In Touch</a>
-                </div>
-            </div>
-        </section>
-    </main>
+        </div>
+    </section>
 
     <!-- Footer -->
-    <footer>
+    <footer class="main-footer">
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <a href="index.html" class="footer-logo">Crestline<span>Web</span></a>
-                    <p>Premium web development agency based in Juba, South Sudan. We create exceptional digital experiences for businesses across all industries.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    </div>
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="index.html" class="footer-logo">
+                        <span class="logo-main">Crestline</span>
+                        <span class="logo-sub">Web Studio</span>
+                    </a>
+                    <p class="footer-description">Specializing in premium website design and development for construction businesses across the United States.</p>
                 </div>
-                
-                <div class="footer-links">
-                    <h3>Quick Links</h3>
-                    <ul>
+                <div class="footer-col">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html">About</a></li>
                         <li><a href="services.html">Services</a></li>
+                        <li><a href="pricing.html">Pricing</a></li>
+                        <li><a href="testimonials.html">Testimonials</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                 </div>
-                
-                <div class="footer-contact">
-                    <h3>Contact Info</h3>
-                    <ul>
-                        <li>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <div>
-                                <strong>Address:</strong>
-                                <p>Juba, South Sudan</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-phone-alt"></i>
-                            <div>
-                                <strong>Phone:</strong>
-                                <p>+211 926 433 192</p>
-                            </div>
-                        </li>
-                        <li>
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <strong>Email:</strong>
-                                <p>riekgatluak25@gmail.com</p>
-                            </div>
-                        </li>
+                <div class="footer-col">
+                    <h4 class="footer-title">Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html#design">Website Design</a></li>
+                        <li><a href="services.html#development">Website Development</a></li>
+                        <li><a href="services.html#seo">SEO & Local Ranking</a></li>
+                        <li><a href="services.html#redesign">Website Redesign</a></li>
                     </ul>
                 </div>
+                <div class="footer-col">
+                    <h4 class="footer-title">Contact Info</h4>
+                    <div class="contact-info">
+                        <p><i class="fas fa-envelope"></i> info@crestlwebstudio.com</p>
+                        <p><i class="fas fa-globe"></i> Serving construction businesses across the U.S.</p>
+                    </div>
+                </div>
             </div>
-            
             <div class="footer-bottom">
-                <p>&copy; 2025 Crestline Web & Design. All rights reserved.</p>
+                <p class="copyright">&copy; <span id="current-year"></span> Crestline Web Studio — All Rights Reserved</p>
             </div>
         </div>
     </footer>
 
-    <!-- WhatsApp Floating Button -->
-    <div class="whatsapp-float" id="whatsappFloat">
-        <i class="fab fa-whatsapp"></i>
-    </div>
-    
-    <div class="whatsapp-popup" id="whatsappPopup">
-        <div class="popup-header">
-            <i class="fab fa-whatsapp"></i>
-            <h4>Crestline Support</h4>
-        </div>
-        <div class="popup-message">
-            <p><strong>Reply in 1 hour</strong></p>
-            <p>Our team typically responds within 1 hour during business hours.</p>
-        </div>
-        <div class="popup-actions">
-            <a href="https://wa.me/211981211736?text=Hello%20Crestline%20Web%20%26%20Design%2C%20I%20would%20like%20to%20discuss%20a%20project" target="_blank" class="popup-btn chat">Start Chat</a>
-            <div class="popup-btn later" id="closePopup">Maybe Later</div>
-        </div>
-    </div>
-
+    <!-- JavaScript -->
     <script src="script.js"></script>
 </body>
 </html>
