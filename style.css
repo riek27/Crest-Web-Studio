@@ -2153,36 +2153,6 @@ h6 { font-size: 1rem; }
     color: #333;
 }
 
-/* Testimonial expansion */
-.testimonial-card p {
-    max-height: 4.8em;
-    overflow: hidden;
-    transition: max-height 0.4s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.testimonial-card p::after {
-    content: 'Read more...';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    background: linear-gradient(to right, transparent, white 50%);
-    padding-left: 20px;
-    color: #4ecdc4;
-    font-size: 12px;
-    opacity: 0.7;
-    transition: opacity 0.2s;
-}
-
-.testimonial-card p.expanded::after {
-    content: 'Read less';
-}
-
-.testimonial-card p.expanded {
-    max-height: 500px;
-}
-
 /* Form validation styles */
 .form-group {
     position: relative;
