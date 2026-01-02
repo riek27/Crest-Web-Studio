@@ -440,7 +440,7 @@ h6 { font-size: 1rem; }
 .mobile-dropdown-toggle.active i {
     transform: rotate(180deg);
 }
-/* Hero Section - Centered & Enhanced */
+/* Hero Section - Fixed Centering */
 .hero {
     height: 100vh;
     min-height: 700px;
@@ -448,10 +448,10 @@ h6 { font-size: 1rem; }
     overflow: hidden;
     display: flex;
     align-items: center;
-    justify-content: center; /* Added for horizontal centering */
     color: var(--white);
     margin-top: 80px;
-    text-align: center; /* Added for text centering */
+    text-align: center;
+    justify-content: center;
 }
 
 .hero-bg {
@@ -471,11 +471,11 @@ h6 { font-size: 1rem; }
     height: 100%;
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Creates parallax effect */
+    background-attachment: fixed;
     opacity: 0;
-    transition: opacity 1.5s ease, transform 10s ease; /* Slower transition */
+    transition: opacity 1.5s ease, transform 10s ease;
     transform: scale(1.1);
-    filter: brightness(0.7); /* Darkens background for better text contrast */
+    filter: brightness(0.7);
 }
 
 .hero-bg-image.active {
@@ -496,14 +496,18 @@ h6 { font-size: 1rem; }
     z-index: -1;
 }
 
+/* Remove container from hero-content and make it full width */
 .hero-content {
-    max-width: 900px; /* Slightly wider */
-    padding: 0 2rem; /* Increased padding */
-    transform: translateY(30px); /* More dramatic entrance */
+    max-width: 900px;
+    width: 100%;
+    padding: 0 2rem;
+    transform: translateY(30px);
     opacity: 0;
     animation: fadeUp 1.2s ease 0.7s forwards;
     position: relative;
     z-index: 1;
+    margin: 0 auto; /* This centers the content */
+    text-align: center; /* Ensure text is centered */
 }
 
 @keyframes fadeUp {
@@ -518,11 +522,11 @@ h6 { font-size: 1rem; }
 }
 
 .hero-title {
-    font-size: 4rem; /* Larger font */
+    font-size: 4rem;
     margin-bottom: 1.5rem;
-    letter-spacing: 1.5px; /* Slightly more spacing */
+    letter-spacing: 1.5px;
     color: var(--white);
-    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Text shadow for better readability */
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
     line-height: 1.2;
     font-weight: 700;
     position: relative;
@@ -542,9 +546,9 @@ h6 { font-size: 1rem; }
 }
 
 .typing-text {
-    min-height: 2.5em; /* More space for typing animation */
-    margin: 2rem auto; /* Centered with more margin */
-    font-size: 1.6rem; /* Slightly larger */
+    min-height: 2.5em;
+    margin: 2rem auto;
+    font-size: 1.6rem;
     font-weight: 300;
     color: rgba(255, 255, 255, 0.9);
     max-width: 700px;
@@ -556,7 +560,7 @@ h6 { font-size: 1rem; }
     display: inline-block;
     width: 3px;
     background-color: var(--gold);
-    margin-left: 5px; /* More spacing */
+    margin-left: 5px;
     animation: blink 0.8s infinite;
     box-shadow: 0 0 5px var(--gold);
 }
@@ -573,14 +577,13 @@ h6 { font-size: 1rem; }
 }
 
 .hero-cta {
-    margin-top: 3rem; /* More spacing */
+    margin-top: 3rem;
     display: flex;
     justify-content: center;
-    gap: 1.5rem; /* Space between buttons if multiple */
+    gap: 1.5rem;
     flex-wrap: wrap;
 }
 
-/* Enhanced Button Styling for Hero */
 .btn-hero {
     padding: 1.2rem 3rem;
     background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
@@ -605,39 +608,30 @@ h6 { font-size: 1rem; }
     background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
 }
 
-.btn-hero:active {
-    transform: translateY(-2px);
-}
-
-.btn-hero::after {
-    content: '';
+.hero-scroll-indicator {
     position: absolute;
-    top: 50%;
+    bottom: 40px;
     left: 50%;
-    width: 5px;
-    height: 5px;
-    background: rgba(255, 255, 255, 0.5);
-    opacity: 0;
-    border-radius: 100%;
-    transform: scale(1, 1) translate(-50%);
-    transform-origin: 50% 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    animation: float 3s ease-in-out infinite;
+    cursor: pointer;
+    z-index: 1;
 }
 
-.btn-hero:focus:not(:active)::after {
-    animation: ripple 1s ease-out;
-}
-
-@keyframes ripple {
-    0% {
-        transform: scale(0, 0);
-        opacity: 0.5;
+@keyframes float {
+    0%, 100% {
+        transform: translateX(-50%) translateY(0);
     }
-    100% {
-        transform: scale(20, 20);
-        opacity: 0;
+    50% {
+        transform: translateX(-50%) translateY(10px);
     }
 }
-
 /* Scroll indicator */
 .hero-scroll-indicator {
     position: absolute;
@@ -1920,4 +1914,95 @@ h6 { font-size: 1rem; }
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
+}
+
+
+/* Fix Footer Copyright Centering */
+.footer-bottom {
+    text-align: center;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+/* Ensure all section headers are centered */
+.section-header {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    width: 100% !important;
+}
+
+.section-title {
+    text-align: center !important;
+    display: inline-block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.section-subtitle {
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+/* Center industry and service cards */
+.industry-grid,
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    justify-items: center; /* This centers the cards */
+}
+
+.industry-card,
+.service-card {
+    background-color: var(--white);
+    padding: 2.5rem 2rem;
+    text-align: center;
+    border-radius: var(--radius-md);
+    transition: var(--transition);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 350px; /* Limit max width */
+    width: 100%; /* Make it responsive */
+}
+
+/* Center testimonials */
+.testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    justify-items: center;
+}
+
+.testimonial-card {
+    background-color: var(--white);
+    padding: 2rem;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    max-width: 350px;
+    width: 100%;
+}
+
+/* Center CTA sections */
+.cta-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
 }
